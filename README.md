@@ -26,9 +26,14 @@ Describe the overall architecture of your microservices system. You can include 
 
 List the individual microservices in your project and briefly describe their responsibilities.
 
-- **Service 1:** ...
-- **Service 2:** ...
-- **Service 3:** ...
+- **Service 1:** Catalog Service
+- **Service 2:** Inventory Service
+- **Service 3:** Identity Service
+- **Service 4:** Notification Service
+- **Service 5:** Order Service
+- **Service 6:** Payment Service
+- **Service 7:** Promotion Service
+- **Service 8:** User Service
 
 ## Getting Started
 
