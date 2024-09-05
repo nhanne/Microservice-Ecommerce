@@ -12,7 +12,7 @@ public class RabbitMqProducer : IMessageProducer
         var factory = new ConnectionFactory()
         {
             HostName = "localhost",
-            Port = 5673,
+            Port = 8080,
             UserName = "admin",
             Password = "1234",
             VirtualHost = "/"

@@ -10,13 +10,14 @@ using CatalogService.Application.Repositories;
 using CatalogService.Common.Resources;
 using CatalogService.Application.Services;
 using Hangfire;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using CatalogService.Infrastructure;
 using CatalogService.Application;
+using Microsoft.AspNetCore.RateLimiting;
+using System.Threading.RateLimiting;
 
 #endregion
 
@@ -27,6 +28,18 @@ builder.Services.AddOptions();
 builder.Services.AddRazorPages();
 builder.Services.AddControllers();
 builder.Services.AddControllersWithViews();
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddRateLimiter(options =>
+{
+    options.AddFixedWindowLimiter("Fixed", options =>
+    {
+        options.PermitLimit = 10;
+        options.Window = TimeSpan.FromMinutes(1);
+        options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        options.QueueLimit = 20;
+    });
+});
 
 #region Database
 
@@ -115,6 +128,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.UseCors("AllowSpecificOrigin");
 app.UseHangfireDashboard();
+app.UseRateLimiter();
 app.Run();
 
 #endregion

@@ -11,6 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Asp.Versioning.Mvc" Version="7.0.0" />
     <PackageReference Include="Elastic.Clients.Elasticsearch" Version="8.14.6" />
     <PackageReference Include="Hangfire" Version="1.8.14" />
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.0" />
@@ -20,12 +22,6 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.6.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.6.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.6.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\css\" />
-    <Folder Include="wwwroot\js\" />
-    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +50,10 @@
     <_ContentIncludedByDefault Remove="E-Commerce.Application\obj\E-Commerce.Application.csproj.nuget.dgspec.json" />
     <_ContentIncludedByDefault Remove="E-Commerce.Application\obj\project.assets.json" />
     <_ContentIncludedByDefault Remove="E-Commerce.Application\obj\project.packagespec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

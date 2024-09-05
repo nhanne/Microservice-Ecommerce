@@ -3,7 +3,7 @@ using CatalogService.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
 namespace CatalogService.Application.Repositories;
-public abstract  class SqlRepository<TEntity> : IRepository<TEntity> where TEntity : class
+public abstract class SqlRepository<TEntity> : IRepository<TEntity> where TEntity : class
 {
     private readonly StoreDbContext _database;
     private readonly DbSet<TEntity> _dbSet;
@@ -14,7 +14,7 @@ public abstract  class SqlRepository<TEntity> : IRepository<TEntity> where TEnti
         _dbSet = context.Set<TEntity>();
     }
     
-    public virtual async Task<IEnumerable<TEntity>> GetAllAsync()
+    public virtual async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
     {
         return await _dbSet.AsNoTracking().ToListAsync();
     }

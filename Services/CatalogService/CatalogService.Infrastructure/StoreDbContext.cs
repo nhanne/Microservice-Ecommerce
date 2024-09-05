@@ -24,7 +24,7 @@ public class StoreDbContext : DbContext //: IdentityDbContext<User>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly(),
-            x => x.Namespace != null && x.Namespace.StartsWith("E_Commerce.MappingConfigurations"));
+            x => x.Namespace != null && x.Namespace.StartsWith("CatalogService.Infrastructure"));
 
         modelBuilder.Entity<Color>().ToTable("Colors");
         modelBuilder.Entity<Size>().ToTable("Sizes");
