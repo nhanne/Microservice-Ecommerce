@@ -23,10 +23,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderService", "OrderServic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentService", "PaymentService", "{6563819A-EC3D-4C12-92ED-ABED1A1DB1EB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "IdentityService", "{D368BFEF-99A1-45E0-8E25-866528F7406A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserService", "UserService", "{47C4699E-5502-4034-9010-DD0C638362D3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InventoryService", "InventoryService", "{C992CEBC-E73D-4545-9C8A-296FCDE3B995}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationService", "NotificationService", "{092EC6F8-BF26-4BC8-9521-760F26B1CDCC}"
@@ -39,19 +35,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DFB00143-E397-478C-BAD5-BDF5673742DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService.API", "Services\InventoryService\InventoryService.API\InventoryService.API.csproj", "{141F55FC-1018-42E8-B682-B45B0FB7E011}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryService.API", "Services\InventoryService\InventoryService.API\InventoryService.API.csproj", "{141F55FC-1018-42E8-B682-B45B0FB7E011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService.Application", "Services\InventoryService\InventoryService.Application\InventoryService.Application.csproj", "{33F42E71-096E-4764-B586-36EBDE429ABA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryService.Application", "Services\InventoryService\InventoryService.Application\InventoryService.Application.csproj", "{33F42E71-096E-4764-B586-36EBDE429ABA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService.Domain", "Services\InventoryService\InventoryService.Domain\InventoryService.Domain.csproj", "{D34E1E92-1A71-49ED-ABA4-FBADF3BAE0FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryService.Domain", "Services\InventoryService\InventoryService.Domain\InventoryService.Domain.csproj", "{D34E1E92-1A71-49ED-ABA4-FBADF3BAE0FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService.Infrastructure", "Services\InventoryService\InventoryService.Infrastructure\InventoryService.Infrastructure.csproj", "{D49B14F5-E2C0-4BD5-810D-C302EB242238}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryService.Infrastructure", "Services\InventoryService\InventoryService.Infrastructure\InventoryService.Infrastructure.csproj", "{D49B14F5-E2C0-4BD5-810D-C302EB242238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "BuildingBlocks\Shared\Shared.csproj", "{AA13462F-180A-4CF0-A43F-47D24F771D29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "BuildingBlocks\Shared\Shared.csproj", "{AA13462F-180A-4CF0-A43F-47D24F771D29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "ApiGateway\OcelotApiGateway\OcelotApiGateway.csproj", "{B6BC710A-E2ED-4DC5-AA56-BD8321AA8EEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotApiGateway", "ApiGateway\OcelotApiGateway\OcelotApiGateway.csproj", "{B6BC710A-E2ED-4DC5-AA56-BD8321AA8EEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Test", "Tests\CatalogService.Test\CatalogService.Test.csproj", "{7D3E3111-6340-49C2-9442-60060029F66A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Test", "Tests\CatalogService.Test\CatalogService.Test.csproj", "{7D3E3111-6340-49C2-9442-60060029F66A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,8 +117,6 @@ Global
 		{2F9690F6-F193-4C86-B14C-1B53D903F47B} = {6F816204-7E17-4982-8C78-C96CB92F9B13}
 		{1ECCB779-B4FF-4FDB-B6B9-40CFC1C58C75} = {6F816204-7E17-4982-8C78-C96CB92F9B13}
 		{6563819A-EC3D-4C12-92ED-ABED1A1DB1EB} = {6F816204-7E17-4982-8C78-C96CB92F9B13}
-		{D368BFEF-99A1-45E0-8E25-866528F7406A} = {6F816204-7E17-4982-8C78-C96CB92F9B13}
-		{47C4699E-5502-4034-9010-DD0C638362D3} = {6F816204-7E17-4982-8C78-C96CB92F9B13}
 		{C992CEBC-E73D-4545-9C8A-296FCDE3B995} = {6F816204-7E17-4982-8C78-C96CB92F9B13}
 		{092EC6F8-BF26-4BC8-9521-760F26B1CDCC} = {6F816204-7E17-4982-8C78-C96CB92F9B13}
 		{B4C9E2BE-7C2D-4910-91B4-7F86AA9A710C} = {6F816204-7E17-4982-8C78-C96CB92F9B13}
