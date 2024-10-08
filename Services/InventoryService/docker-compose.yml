@@ -1,0 +1,29 @@
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: InventoryService.API/Dockerfile
+    ports:
+      - "8085:80"
+    # depends_on:
+    #   - mongodb
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      # - ConnectionString="mongodb://mongodb:27018/inventory"
+    restart: always
+
+  # mongodb:
+  #   image: mongo
+  #   ports:
+  #     - "27018:27017"
+  #   volumes:
+  #     - mongodb_data:/data/db
+  #   environment:
+  #     - MONGO_INITDB_DATABASE=inventory
+  #     - MONGO_INITDB_ROOT_USERNAME=mongo
+  #     - MONGO_INITDB_ROOT_PASSWORD=root
+  #   restart: always
+# volumes:
+#   mongodb_data:
